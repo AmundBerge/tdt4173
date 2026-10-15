@@ -1,0 +1,37 @@
+{
+  "holdout_2022_micro_auc": 0.8622548436487745,
+  "per_unit_auc": {
+    "Hogga_G1": 0.895429461130141,
+    "Tokke_G1": 0.9164933041237628,
+    "Tokke_G2": 0.9238269906483081,
+    "Tokke_G3": 0.9023014870171828,
+    "Tokke_G4": 0.8890791881223152,
+    "Lio_G1": 0.7208289625067472,
+    "Byrte_G1": 0.8561606656790921,
+    "Vinje_G1": 0.9066974560821985,
+    "Vinje_G2": 0.907629202126956,
+    "Vinje_G3": 0.918614114323171,
+    "Haukeli_G1": 0.8359386441303922,
+    "Songa_G1": 0.8117918383902791,
+    "Kjela_G1": 0.7445879333340405,
+    "Vesle Kjela_G1": 0.8814883562987713
+  },
+  "best_iteration": 1637,
+  "params": {
+    "n_estimators": 3000,
+    "learning_rate": 0.05,
+    "max_depth": 6,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 5,
+    "tree_method": "hist",
+    "device": "cuda",
+    "random_state": 42,
+    "eval_metric": "auc",
+    "early_stopping_rounds": 100
+  },
+  "fit_seconds": 191.98041081428528,
+  "refit_seconds": 197.23993492126465,
+  "total_seconds": 402.45684909820557,
+  "n_features": 85
+}
