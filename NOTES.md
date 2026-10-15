@@ -120,3 +120,13 @@
 - Code: `run_margin_fixed.py --lr 0.001 --rounds 12000`. Train < 2022, score 2022; other params as the notebook.
 - Result: 2022 micro ROC AUC **0.9792** at 12000 rounds (same as lr 0.05 honest 0.9792, lr 0.01 0.9788). Still creeping up slowly: 5000 -> 0.9778, 8000 -> 0.9789, 10000 -> 0.9791.
 - Timing: 1592 s on GPU. No gain over lr 0.05 / 249 rounds (49 s): the learning rate is not the bottleneck.
+
+## 2026-10-15 – stacked stage-2 model (`notebooks/07_xgboost_stacked.ipynb`, GPU, honest protocol)
+
+- Stage 1 = context model (268 feats, 198 rounds). Forward-chained OOF: stage-1 for year y trained on years < y
+  (2016: 0.951, 2017: 0.978, 2018: 0.969, 2019: 0.981, **2020: 0.922**, 2021: 0.979, 2022: 0.981).
+- Stage 2 = same features + 212 stacked: each unit's stage-1 prob at lags −6..+6, ±3 h / ±12 h means, units-on sums for Tokke/Vinje.
+- Rounds on 2021: 185 (2021 AUC 0.9808); **2022 report AUC 0.9781** (stage 1 alone 0.9806, −0.0025). 12/14 units worse, Lio −0.024.
+  Transition error share unchanged (0.38). Stacked features = 54% of stage-2 gain → over-reliance on stage 1 that does not transfer.
+- Decision: drop stacking. Submission kept for the record: `submissions/2026-10-15_xgb_stacked_cv0.9781.csv`.
+- Side finding: 2020 is a hard year (0.922) → do rolling validation over 2020/2021/2022 before trusting single-year gains.
