@@ -1,3 +1,3 @@
 # Project in TDT4173
 
-Team name "The piss stream optimizers"
+Team name "[65] Virtual team 404"
