@@ -114,3 +114,9 @@
   smaller total (Brier 0.0546 → 0.0528): context helped more away from transitions than at them.
 - Tokke_G1 ON share vs hours of positive margin behind/ahead: 0.38 at 0 h, 0.84 at 1 h, 0.96 at >24 h → strong, simple signal.
 - Submission (both groups): `submissions/2026-10-15_xgb_context_cv0.9805.csv`. Decision: drop cascade, keep context.
+
+## 2026-10-15 – margin features, lr 0.001, 12000 rounds, no early stopping (GPU)
+
+- Code: `run_margin_fixed.py --lr 0.001 --rounds 12000`. Train < 2022, score 2022; other params as the notebook.
+- Result: 2022 micro ROC AUC **0.9792** at 12000 rounds (same as lr 0.05 honest 0.9792, lr 0.01 0.9788). Still creeping up slowly: 5000 -> 0.9778, 8000 -> 0.9789, 10000 -> 0.9791.
+- Timing: 1592 s on GPU. No gain over lr 0.05 / 249 rounds (49 s): the learning rate is not the bottleneck.

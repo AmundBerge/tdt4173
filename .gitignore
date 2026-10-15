@@ -5,5 +5,3 @@ __pycache__/
 results/*.npy
 results/submission_*.csv
 results_baseline_honest/
-submissions/*.csv
-!submissions/2026-10-15_xgb_context_cv0.9805.csv
