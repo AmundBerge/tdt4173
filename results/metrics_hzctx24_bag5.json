@@ -1,0 +1,33 @@
+{
+  "variant": "hz_ctx24",
+  "name": "hzctx24_bag5",
+  "params": {
+    "learning_rate": 0.05,
+    "max_depth": 6,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 5
+  },
+  "seeds": 5,
+  "report_2022_micro_auc": 0.9871330263713569,
+  "tune_2021_auc": 0.9874947740717367,
+  "n_rounds": 281,
+  "n_features": 492,
+  "per_unit_auc": {
+    "Hogga_G1": 0.9779740642189414,
+    "Tokke_G1": 0.995630507414869,
+    "Tokke_G2": 0.9933015785243997,
+    "Tokke_G3": 0.9949377977038614,
+    "Tokke_G4": 0.9939341669820108,
+    "Lio_G1": 0.9567628899823456,
+    "Byrte_G1": 0.9984478434604459,
+    "Vinje_G1": 0.9881625355768614,
+    "Vinje_G2": 0.9847227024545954,
+    "Vinje_G3": 0.9742348305883901,
+    "Haukeli_G1": 0.9570280725557563,
+    "Songa_G1": 0.9968781038096379,
+    "Kjela_G1": 0.9858763053485443,
+    "Vesle Kjela_G1": 0.9895355212755164
+  },
+  "seconds": 4056
+}

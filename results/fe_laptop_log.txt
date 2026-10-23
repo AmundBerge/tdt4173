@@ -1,0 +1,9 @@
+variant horizon_nolevel: X (490896, 384)
+  horizon_nolevel 2020: rounds  283  tune 0.9830  report 0.9750  [1166s]
+  horizon_nolevel 2021: rounds  258  tune 0.9751  report 0.9872  [1291s]
+  horizon_nolevel 2022: rounds  388  tune 0.9873  report 0.9869  [1973s]
+
+3-year mean report AUC per variant:
+                  mean    min
+variant                      
+horizon_nolevel  0.983  0.975

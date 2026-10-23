@@ -1,0 +1,31 @@
+{
+  "variant": "relctx_nolevel",
+  "report_2022_micro_auc": 0.9869701948521955,
+  "tune_2021_auc": 0.9874803014741121,
+  "n_rounds": 403,
+  "n_features": 321,
+  "per_unit_auc": {
+    "Hogga_G1": 0.9782653797502416,
+    "Tokke_G1": 0.9952964178816224,
+    "Tokke_G2": 0.9935047720452393,
+    "Tokke_G3": 0.9951682575564575,
+    "Tokke_G4": 0.994304852271249,
+    "Lio_G1": 0.9533193893960306,
+    "Byrte_G1": 0.9983440068200586,
+    "Vinje_G1": 0.9874855565054245,
+    "Vinje_G2": 0.9846395545471162,
+    "Vinje_G3": 0.9752695920010606,
+    "Haukeli_G1": 0.9574307440429988,
+    "Songa_G1": 0.997171238992098,
+    "Kjela_G1": 0.9878593536474628,
+    "Vesle Kjela_G1": 0.9900484548104311
+  },
+  "params": {
+    "learning_rate": 0.05,
+    "max_depth": 6,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 5
+  },
+  "seconds": 1051
+}
