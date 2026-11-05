@@ -270,3 +270,11 @@ Use per-unit forests: local reservoir features for most units; broad core featur
 Unsuccessful additions excluded: unscaled margins, focused water context, stronger prior shrinkage, and the shared forest. Output sorting was not retained.
 The 2021 and 2022 validation years both informed development; these are development validation results, not an unbiased estimate of hidden-test performance.
 Saved the selected implementation in model3.ipynb. Submission generation remains the last section; no new full-data submission fit was run after the user stopped the search.
+
+## 2026-11-05 - Final random forest interpretation for the report
+
+- Refit the final model3short configuration on all 2,922 labeled 2015-2022 cases (490,896 hourly rows), using the existing 121-core / 158-total feature builder, plant-specific feature subsets and settings, and seed 67. No submission was generated and no validation score was recomputed.
+- Saved normalized impurity-based importance for each of the 14 units; Lio's two forests contribute equally. Mean importance gives each unit equal weight and assigns zero to unused features. Checked that each unit's importances sum to one.
+- Leading mean importances: hourly Vinjevatn margin 0.166214; weekly Vinjevatn margin 0.050818; hourly Vaamarvatn margin 0.049176. Hourly margins and weekly/nearby profitability groups together account for 0.787514 of average importance.
+- Report PNG, PDF and SVG figures, per-unit and mean CSV values, metadata, and suggested caption/comment are in results/model3_interpretation/. Visually checked both PNG layouts. Reproduction scripts: src/interpret_model3.py and src/plot_model3_importance.py; the latter re-renders saved results without refitting.
+- These are training-set impurity importances, not causal effects, effect directions, or independent measures of test-performance contribution. Correlated engineered features can share importance. Course context: predictor_practice_related_materials/rf_temps.ipynb (random forest feature selection) and Feature_Engineering_slides.pdf (feature selection).
