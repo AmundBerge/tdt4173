@@ -1,0 +1,16 @@
+Suggested caption:
+Top ten impurity-based feature importances for the final random forest configuration fitted on all labeled 2015-2022 cases. Importances are normalized within each unit and averaged equally across the 14 units. Unused features contribute zero, and Lio's two forests receive equal weights.
+
+Suggested report comment:
+We interpreted the final random forest configuration using impurity-based feature importance, averaged equally across the 14 generating units. Vinjevatn's standardized hourly price-minus-water-value margin had the highest importance (16.62%), followed by its weekly mean margin (5.08%) and Vaamarvatn's hourly margin (4.92%). Several nearby profitable-hour shares also ranked among the leading features. This suggests that the forests use both the current price relative to end-of-week water value and profitability over surrounding forecast hours when predicting commitment. These importances summarize reductions in training-set impurity; correlated features can share importance, and the values establish neither effect direction nor causality.
+
+Optional comment for the detailed two-panel figure:
+The importance of feature groups varies across units. Hourly price-water margins account for approximately 49-59% of importance in the Tokke forests, whereas weekly and nearby profitability features account for about 51% in Haukeli. Haukeli's additional water-availability features account for approximately 16% of its importance. These differences describe the fitted models under their selected feature subsets, rather than independent tests of each feature group's predictive value.
+
+Reproduce the fitting and full figure:
+.venv\Scripts\python.exe src\interpret_model3.py
+
+Re-render both figures from the saved CSV results, without fitting:
+.venv\Scripts\python.exe src\plot_model3_importance.py
+
+Method: normalized mean decrease in Gini impurity (RandomForestClassifier.feature_importances_). Feature building, plant-specific subsets, forest settings and random_state=67 follow model3short.ipynb. The analysis fits all 2,922 labeled weekly cases (490,896 hourly rows); no new validation score or test-performance claim is made.

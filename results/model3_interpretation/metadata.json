@@ -1,0 +1,25 @@
+{
+  "cases": 2922,
+  "hourly_rows": 490896,
+  "core_features": 121,
+  "generated_features": 158,
+  "units": [
+    "Hogga_G1",
+    "Tokke_G1",
+    "Tokke_G2",
+    "Tokke_G3",
+    "Tokke_G4",
+    "Lio_G1",
+    "Byrte_G1",
+    "Vinje_G1",
+    "Vinje_G2",
+    "Vinje_G3",
+    "Haukeli_G1",
+    "Songa_G1",
+    "Kjela_G1",
+    "Vesle Kjela_G1"
+  ],
+  "training_start": "2015-01-01 00:00:00",
+  "training_end": "2022-12-31 00:00:00",
+  "method": "Normalized mean decrease in impurity; equal unit weighting; Lio 50/50 blend"
+}
