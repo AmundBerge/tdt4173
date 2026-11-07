@@ -1,0 +1,8 @@
+# Group 267, Kaggle team "[267] Virtual team 404"
+# Python 3.12.10
+# Model 1 (XGBoost) was trained on an NVIDIA GeForce RTX 2070 (driver 610.88, CUDA).
+# Without a GPU the notebook falls back to the CPU automatically.
+numpy==2.5.3
+pandas==3.0.6
+scikit-learn==1.9.1
+xgboost==3.4.1
